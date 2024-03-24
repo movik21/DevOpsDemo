@@ -126,7 +126,7 @@ export class GuiModel {
                         },
                         {
                             "type": "newButton",
-                            "name": { default: "Neues ToDo"},
+                            "name": { default: "New ToDo"},
                             "icon": "fa-user",
                             "color": "green",
                             "width": 2,
@@ -155,12 +155,12 @@ export class GuiModel {
                         },
                         {
                             "type": "newButton",
-                            "name": { default: "New idea"},
+                            "name": { default: "New Idea"},
                             "icon": "fa-user",
                             "color": "purple",
                             "width": 2,
                             "form" : {
-                                "form" : "NewIdea"
+                                "form" : "NewIdeaForm"
                             }
                         },
                         {
@@ -169,9 +169,9 @@ export class GuiModel {
                             "icon": "fa-user",
                             "color": "wet-asphalt",
                             "search": true,
-                            "url": "/todo",
+                            "url": "/mynote",
                             "form": {
-                                "form": "NewIdea"
+                                "form": "NewIdeaForm"
                             }
                         }
                     ]
