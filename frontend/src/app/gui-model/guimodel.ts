@@ -95,15 +95,24 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "pageLabel",
-                            "value": "<h4>Willkommen bei DevOps</h4>",
+                            "value": "<h4>Willkommen bei DevOps <3 </h4>",
                             "newRow": true
                         },
                         {
                             "type": "button",
-                            "name": { default: "ToDo-List" },
-                            "icon": "fa-file-alt",
-                            "color": "wet-asphalt",
+                            "name": { default: "MyToDo-List" },
+                            "icon": "fa-solid fa-book",
+                            "color": "blue",
                             "page": "toDoPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "MyImportantNotes" },
+                            "icon": "fa-solid fa-brain",
+                            "color": "wisteria",
+                            "page": "myNotePage",
                             "width": 2,
                             "newRow": true,
                         },
@@ -134,6 +143,35 @@ export class GuiModel {
                             "url": "/todo",
                             "form": {
                                 "form": "ToDoForm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "myNotePage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "New idea"},
+                            "icon": "fa-user",
+                            "color": "purple",
+                            "width": 2,
+                            "form" : {
+                                "form" : "NewIdea"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "name": "NewIdea",
+                            "icon": "fa-user",
+                            "color": "wet-asphalt",
+                            "search": true,
+                            "url": "/todo",
+                            "form": {
+                                "form": "NewIdea"
                             }
                         }
                     ]
