@@ -9,8 +9,8 @@ public class MyNotesControllerTest {
     @Test
     public void testCreate() {
         MyNotesController controller = new MyNotesController();
-        var todo = new MyNotes(1, "t", "d");
-        controller.createMyNote(1, todo);
+        var mynote = new MyNotes(1, "t", "d");
+        controller.createMyNote(1, mynote);
         assertEquals(1, controller.count());
         assertEquals(1, controller.mynote().size());
     }
