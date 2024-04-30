@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'node-20.10.0' // Specify needed nodejs installation where npm installed packages will be provided to the PATH
+        nodejs 'NodeJS 20.10.0' // Specify needed nodejs installation where npm installed packages will be provided to the PATH
     }
     stages {
         stage('Build') {
