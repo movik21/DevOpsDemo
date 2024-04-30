@@ -5,9 +5,15 @@ pipeline {
         nodejs 'NodeJS 20.10.0' // Specify needed nodejs installation where npm installed packages will be provided to the PATH
     }
     stages {
-        stage('Environment') {
+        stage('Build Environment') {
             steps{
-                echo 'Environement set..'
+                echo 'Environement..'
+                
+                // Check NPM
+                echo "Node.js version: ${sh(returnStdout: true, script: 'node --version').trim()}"
+                echo "npm version: ${sh(returnStdout: true, script: 'npm --version').trim()}"
+
+                // Source Code Management
                 git branch: 'main', url: 'https://github.com/movik21/DevOpsDemo.git'
                 deleteDir()
             }
@@ -18,7 +24,7 @@ pipeline {
                 echo 'Building..'
                 // Build Step: Invoke Gradle script
                 dir('backend') {
-                    sh './gradlew Test'
+                    sh './gradlew test'
                 }
 
                 // Build Step: Install and run NPM for frontend
