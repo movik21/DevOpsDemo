@@ -5,12 +5,17 @@ pipeline {
         nodejs 'NodeJS 20.10.0' // Specify needed nodejs installation where npm installed packages will be provided to the PATH
     }
     stages {
+        stage('Environment') {
+            steps{
+                echo 'Environement set..'
+                git branch: 'main', url: 'https://github.com/movik21/DevOpsDemo.git'
+                deleteDir()
+            }
+        }
+
         stage('Build') {
             steps {
-                deleteDir()
                 echo 'Building..'
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/movik21/DevOpsDemo.git']])
-
                 // Build Step: Invoke Gradle script
                 dir('backend') {
                     sh './gradlew Test'
