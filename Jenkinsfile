@@ -17,8 +17,10 @@ pipeline {
                 }
 
                 // Build Step: Install and run NPM for frontend
-                npm install --prefix frontend
-                npm run build --prefix frontend
+                dir('frontend') {
+                    sh 'npm install'
+                    sh 'npm run build'
+                    }
             }
         }
         stage('Test') {
