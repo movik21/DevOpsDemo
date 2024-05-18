@@ -157,7 +157,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": { default: "New Idea"},
                             "icon": "fa-user",
-                            "color": "purple",
+                            "color": "green",
                             "width": 2,
                             "form" : {
                                 "form" : "NewIdeaForm"
