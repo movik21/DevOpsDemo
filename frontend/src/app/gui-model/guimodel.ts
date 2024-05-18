@@ -87,6 +87,41 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "NewIdeaForm",
+                    "title": { default: "My new idea" },
+                    "url": "/mynote",
+                    "formFieldList": [
+                        {
+                            "id":   "title",
+                            "type": "text",
+                            "name": { default: "Titel" },
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": { default: "Text" },
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
             ],
             "pageList": [
                 {
@@ -157,7 +192,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": { default: "New Idea"},
                             "icon": "fa-user",
-                            "color": "green",
+                            "color": "purple",
                             "width": 2,
                             "form" : {
                                 "form" : "NewIdeaForm"
