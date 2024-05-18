@@ -1,5 +1,10 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/from-referrer/) 
 
+# Azure & GitHub Actions Deployment added
+Forked project for Meine-Demo deployment with the help of DockerHub and Azure
+
+This [docker image](https://hub.docker.com/r/movik21/meinedevopsdemo) is loaded automatically from DockerHub
+
 ### DevOpsStarter
 
 DevOps Prototype
